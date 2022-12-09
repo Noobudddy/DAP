@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-<<<<<<<< HEAD:Personal Project/Assets/Scripts/AIWaypoints.cs
-public class AIWaypoints : MonoBehaviour
-========
-public class AllyController : MonoBehaviour
->>>>>>>> upstream/main:Personal Project/Assets/Scripts/AllyController.cs
+public class FindPath : MonoBehaviour
 {
+
+    public NavMeshAgent myAgent;
+
+    public GameObject target;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        myAgent.SetDestination(target.transform.position);
     }
 
     // Update is called once per frame

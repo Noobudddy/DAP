@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AllyController : MonoBehaviour
 {
+
+    public bool isAlive;
+
     // Start is called before the first frame update
     void Start()
     {

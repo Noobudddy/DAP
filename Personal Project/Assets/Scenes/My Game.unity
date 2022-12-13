@@ -524,6 +524,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &84800680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5206763039213060937, guid: ad1ac80b2b7b97246a72688136e5c930, type: 3}
+  m_PrefabInstance: {fileID: 7266498406842080644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &84800687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84800680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eedc26d767b6f466d84fc6060b1375f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAlive: 0
 --- !u!1 &169254511
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,7 +905,7 @@ MonoBehaviour:
   targetCircle: {fileID: 0}
   indicatorRangeCircle: {fileID: 0}
   ability3Canvas: {fileID: 0}
-  maxAbility2Distance: 0
+  maxAbility2Distance: 5.5
   abilityImage4: {fileID: 1454262472}
   cooldown4: 40
   ability4: 114
@@ -1747,6 +1765,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 614356004}
   m_CullTransparentMesh: 1
+--- !u!1 &634727056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 45790873224214183, guid: ad1ac80b2b7b97246a72688136e5c930, type: 3}
+  m_PrefabInstance: {fileID: 7266498406842080644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &634727063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634727056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eedc26d767b6f466d84fc6060b1375f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAlive: 0
 --- !u!1 &659592262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2282,6 +2318,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781755293}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &795745430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5206763039182869809, guid: ad1ac80b2b7b97246a72688136e5c930, type: 3}
+  m_PrefabInstance: {fileID: 7266498406842080644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &795745437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795745430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eedc26d767b6f466d84fc6060b1375f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAlive: 0
 --- !u!1 &799339808
 GameObject:
   m_ObjectHideFlags: 0
@@ -3642,6 +3696,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454262470}
   m_CullTransparentMesh: 1
+--- !u!1 &1545631587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5206763039926803120, guid: ad1ac80b2b7b97246a72688136e5c930, type: 3}
+  m_PrefabInstance: {fileID: 7266498406842080644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1545631594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545631587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eedc26d767b6f466d84fc6060b1375f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAlive: 0
 --- !u!1 &1572941528
 GameObject:
   m_ObjectHideFlags: 0
@@ -3964,6 +4036,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650193524}
   m_CullTransparentMesh: 1
+--- !u!1 &1660349329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5206763038505149301, guid: ad1ac80b2b7b97246a72688136e5c930, type: 3}
+  m_PrefabInstance: {fileID: 7266498406842080644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1660349336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660349329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eedc26d767b6f466d84fc6060b1375f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAlive: 0
 --- !u!1 &1720714715
 GameObject:
   m_ObjectHideFlags: 0
@@ -4393,6 +4483,24 @@ MonoBehaviour:
   speed: 0.2
   minion: {fileID: 1853415207}
   target: {x: 0, y: 0, z: 0}
+--- !u!1 &1890250103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5206763039428200519, guid: ad1ac80b2b7b97246a72688136e5c930, type: 3}
+  m_PrefabInstance: {fileID: 7266498406842080644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1890250110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890250103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eedc26d767b6f466d84fc6060b1375f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAlive: 0
 --- !u!1 &1924587466
 GameObject:
   m_ObjectHideFlags: 0

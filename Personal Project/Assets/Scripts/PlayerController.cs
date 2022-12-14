@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public Camera camera;
     private RaycastHit hit;
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
     private string groundTag = "Ground";
 
     public float rotateSpeedMovement = 0.1f;
@@ -37,3 +37,11 @@ public class PlayerController : MonoBehaviour
 
     }
 }
+
+/*Quaternion rotationToLookAt = Quaternion.LookRotation(hit.point - transform.position);
+float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
+    rotationToLookAt.eulerAngles.y,
+    ref rotateVelocity,
+    rotateSpeedMovement * (Time.deltaTime * 5));
+
+transform.eulerAngles = new Vector3(0, rotationY, 0);*/

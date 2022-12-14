@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028346, g: 0.22571373, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -874,7 +874,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &185683032
 MonoBehaviour:
@@ -891,26 +891,26 @@ MonoBehaviour:
   abilityImage1: {fileID: 176497744}
   cooldown1: 11
   ability1: 113
-  ability1Canvas: {fileID: 0}
-  skillshot: {fileID: 0}
-  player: {fileID: 0}
+  ability1Canvas: {fileID: 1284406678}
+  skillshot: {fileID: 933544133}
+  player: {fileID: 185683028}
   abilityImage2: {fileID: 1764927833}
   cooldown2: 10
   ability2: 119
-  ability2Canvas: {fileID: 0}
-  skillshot2: {fileID: 0}
+  ability2Canvas: {fileID: 2007689975}
+  skillshot2: {fileID: 1251944203}
   abilityImage3: {fileID: 1210326669}
   cooldown3: 8
   ability3: 101
-  targetCircle: {fileID: 0}
-  indicatorRangeCircle: {fileID: 0}
-  ability3Canvas: {fileID: 0}
-  maxAbility2Distance: 5.5
+  targetCircle: {fileID: 1053074682}
+  indicatorRangeCircle: {fileID: 475759297}
+  ability3Canvas: {fileID: 1374137005}
+  maxAbility3Distance: 0
   abilityImage4: {fileID: 1454262472}
   cooldown4: 40
   ability4: 114
-  ability1Canvas4: {fileID: 0}
-  skillshot4: {fileID: 0}
+  ability4Canvas: {fileID: 1927803611}
+  skillshot4: {fileID: 374180081}
 --- !u!1 &217230496
 GameObject:
   m_ObjectHideFlags: 0
@@ -4480,7 +4480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae09c96bf93e5148900fec528ba5a1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
+  speed: 0.02
   minion: {fileID: 1853415207}
   target: {x: 0, y: 0, z: 0}
 --- !u!1 &1890250103 stripped
@@ -5282,7 +5282,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3366563145695885056, guid: ad1ac80b2b7b97246a72688136e5c930, type: 3}
       propertyPath: speed
-      value: 0.2
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: -3366563145695885056, guid: ad1ac80b2b7b97246a72688136e5c930, type: 3}
       propertyPath: target.x

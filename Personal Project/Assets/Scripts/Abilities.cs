@@ -8,7 +8,7 @@ public class Abilities : MonoBehaviour
     [Header("Ability 1")]
     public Image abilityImage1;
     public float cooldown1 = 11;
-    bool isCooldown = true;
+    bool isCooldown1 = true;
     public KeyCode ability1;
 
     Vector3 position;
@@ -35,7 +35,7 @@ public class Abilities : MonoBehaviour
     public Image indicatorRangeCircle;
     public Canvas ability3Canvas;
     private Vector3 posUp;
-    public float maxAbility2Distance;
+    public float maxAbility3Distance;
 
     [Header("Ability 4")]
     public Image abilityImage4;
@@ -43,7 +43,7 @@ public class Abilities : MonoBehaviour
     bool isCooldown4 = true;
     public KeyCode ability4;
 
-    public Canvas ability1Canvas4;
+    public Canvas ability4Canvas;
     public Image skillshot4;
 
     // Start is called before the first frame update
@@ -55,6 +55,8 @@ public class Abilities : MonoBehaviour
         abilityImage4.fillAmount = 0;
 
         skillshot.GetComponent<Image>().enabled = false;
+        skillshot2.GetComponent<Image>().enabled = false;
+        skillshot4.GetComponent<Image>().enabled = false;
         targetCircle.GetComponent<Image>().enabled = false;
         indicatorRangeCircle.GetComponent<Image>().enabled = false;
     }
@@ -83,24 +85,48 @@ public class Abilities : MonoBehaviour
                 position = hit.point;
             }
         }
+
+        Quaternion transRot = Quaternion.LookRotation(position - player.transform.position);
+        transRot.eulerAngles = new Vector3(0, transRot.eulerAngles.y, transRot.eulerAngles.z);
+
+        ability1Canvas.transform.rotation = Quaternion.Lerp(transRot, ability1Canvas.transform.rotation, 0f);
+        ability2Canvas.transform.rotation = Quaternion.Lerp(transRot, ability1Canvas.transform.rotation, 0f);
+        ability4Canvas.transform.rotation = Quaternion.Lerp(transRot, ability1Canvas.transform.rotation, 0f);
+
+        var hitPosDir = (hit.point - transform.position).normalized;
+        float distance = Vector3.Distance(hit.point, transform.position);
+        distance = Mathf.Min(distance, maxAbility3Distance);
+
+        var newHitPos = transform.position + hitPosDir * distance;
+        ability3Canvas.transform.position = (newHitPos);
+
     }
 
     void Ability1()
     {
-        if (Input.GetKey(ability1) && isCooldown == false)
+        if (Input.GetKey(ability1) && isCooldown1 == false)
         {
-            isCooldown = true;
+            skillshot.GetComponent<Image>().enabled = true;
+
+            indicatorRangeCircle.GetComponent<Image>().enabled = false;
+            targetCircle.GetComponent<Image>().enabled = false;
+        }
+
+        if (skillshot.GetComponent<Image>().enabled == true && Input.GetMouseButtonDown(0))
+        {
+            isCooldown1 = true;
             abilityImage1.fillAmount = 1;
         }
 
-        if (isCooldown)
+        if (isCooldown1)
         {
             abilityImage1.fillAmount -= 1 / cooldown1 * Time.deltaTime;
+            skillshot.GetComponent<Image>().enabled = false;
 
-            if(abilityImage1.fillAmount <= 0)
+            if (abilityImage1.fillAmount <= 0)
             {
                 abilityImage1.fillAmount = 0;
-                isCooldown = false;
+                isCooldown1 = false;
             }
         }
     }
@@ -109,6 +135,14 @@ public class Abilities : MonoBehaviour
     {
         if (Input.GetKey(ability2) && isCooldown2 == false)
         {
+            skillshot2.GetComponent<Image>().enabled = true;
+
+            indicatorRangeCircle.GetComponent<Image>().enabled = false;
+            targetCircle.GetComponent<Image>().enabled = false;
+        }
+
+        if (skillshot2.GetComponent<Image>().enabled == true && Input.GetMouseButtonDown(0))
+        {
             isCooldown2 = true;
             abilityImage2.fillAmount = 1;
         }
@@ -116,6 +150,7 @@ public class Abilities : MonoBehaviour
         if (isCooldown2)
         {
             abilityImage2.fillAmount -= 1 / cooldown2 * Time.deltaTime;
+            skillshot2.GetComponent<Image>().enabled = false;
 
             if (abilityImage2.fillAmount <= 0)
             {
@@ -129,6 +164,14 @@ public class Abilities : MonoBehaviour
     {
         if (Input.GetKey(ability3) && isCooldown3 == false)
         {
+            indicatorRangeCircle.GetComponent<Image>().enabled = true;
+            targetCircle.GetComponent<Image>().enabled = true;
+
+            skillshot.GetComponent<Image>().enabled = false;
+        }
+
+        if (targetCircle.GetComponent<Image>().enabled == true && Input.GetMouseButtonDown(0))
+        {
             isCooldown3 = true;
             abilityImage3.fillAmount = 1;
         }
@@ -136,6 +179,8 @@ public class Abilities : MonoBehaviour
         if (isCooldown3)
         {
             abilityImage3.fillAmount -= 1 / cooldown3 * Time.deltaTime;
+            indicatorRangeCircle.GetComponent<Image>().enabled = false;
+            targetCircle.GetComponent<Image>().enabled = false;
 
             if (abilityImage3.fillAmount <= 0)
             {
@@ -148,6 +193,14 @@ public class Abilities : MonoBehaviour
     {
         if (Input.GetKey(ability4) && isCooldown4 == false)
         {
+            skillshot4.GetComponent<Image>().enabled = true;
+
+            indicatorRangeCircle.GetComponent<Image>().enabled = false;
+            targetCircle.GetComponent<Image>().enabled = false;
+        }
+
+        if (skillshot4.GetComponent<Image>().enabled == true && Input.GetMouseButtonDown(0))
+        {
             isCooldown4 = true;
             abilityImage4.fillAmount = 1;
         }
@@ -155,6 +208,7 @@ public class Abilities : MonoBehaviour
         if (isCooldown4)
         {
             abilityImage4.fillAmount -= 1 / cooldown4 * Time.deltaTime;
+            skillshot4.GetComponent<Image>().enabled = false;
 
             if (abilityImage4.fillAmount <= 0)
             {

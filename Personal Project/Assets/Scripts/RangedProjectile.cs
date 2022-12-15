@@ -10,7 +10,7 @@ public class RangedProjectile : MonoBehaviour
 
     public bool targetSet;
     public string targetType;
-    public float velocity = 5;
+    public float velocity;
     public bool stopProjectile;
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class RangedProjectile : MonoBehaviour
                 Destroy(gameObject);
             }
 
-            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, velocity * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, velocity);
 
             if(!stopProjectile)
             {

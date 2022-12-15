@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028346, g: 0.22571373, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -910,7 +910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7d9cc2aaa842a2a166006acfd3ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroAttackType: 0
+  heroAttackType: 1
   targetedEnemy: {fileID: 0}
   attackRange: 10
   rotateSpeedForAttack: 0.075

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HeroCombat : MonoBehaviour
 {
-    public enum HeroAttackType { Ranged };
+    public enum HeroAttackType { Melee, Ranged };
     public HeroAttackType heroAttackType;
 
     public GameObject targetedEnemy;
@@ -24,6 +24,7 @@ public class HeroCombat : MonoBehaviour
     void Start()
     {
         moveScript = GetComponent<PlayerController>();
+        statsScript = GetComponent<Stats>();
     }
 
     // Update is called once per frame
@@ -66,6 +67,7 @@ public class HeroCombat : MonoBehaviour
     IEnumerator RangedAttackInterval()
     {
         performRangedAttack = false;
+        Debug.Log("rai work");
 
         yield return new WaitForSeconds(statsScript.attackTime / ((100 + statsScript.attackTime) * 0.01f));
 
@@ -77,6 +79,7 @@ public class HeroCombat : MonoBehaviour
 
     public void RangedAttack()
     {
+        Debug.Log("ra work");
         if (targetedEnemy != null)
         {
             if (targetedEnemy.GetComponent<Targetable>().enemyType == Targetable.EnemyType.Minion)
@@ -92,6 +95,7 @@ public class HeroCombat : MonoBehaviour
     {
         float dmg = statsScript.attackDmg;
 
+        Debug.Log("spawn work");
         Instantiate(projPrefab, projSpawnPoint.transform.position, Quaternion.identity);
 
         if (typeOfEnemy == "Minion")

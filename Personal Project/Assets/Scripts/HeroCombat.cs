@@ -12,10 +12,8 @@ public class HeroCombat : MonoBehaviour
     public float rotateSpeedForAttack;
 
     private PlayerController moveScript;
-
-    public bool basicAtkIdle = false;
-    public bool isHeroAlive;
-    public bool performMeleeAttack = true;
+    public bool isHeroAlive; 
+    private Stats statsScript;
 
     [Header("Ranged Varialbes")]
     public bool performRangedAttack = true;
@@ -58,10 +56,50 @@ public class HeroCombat : MonoBehaviour
                         Debug.Log("Attack The Minion");
 
                         //Start Coroutine To Attack
-                        //StartCoroutine(RangedAttackInterval());
+                        StartCoroutine(RangedAttackInterval());
                     }
                 }
             }
+        }
+    }
+
+    IEnumerator RangedAttackInterval()
+    {
+        performRangedAttack = false;
+
+        yield return new WaitForSeconds(statsScript.attackTime / ((100 + statsScript.attackTime) * 0.01f));
+
+        if (targetedEnemy == null)
+        {
+            performRangedAttack = true;
+        }
+    }
+
+    public void RangedAttack()
+    {
+        if (targetedEnemy != null)
+        {
+            if (targetedEnemy.GetComponent<Targetable>().enemyType == Targetable.EnemyType.Minion)
+            {
+                SpawnRangedProj("Minion", targetedEnemy);
+            }
+        }
+
+        performRangedAttack = true;
+    }
+
+    void SpawnRangedProj(string typeOfEnemy, GameObject targetedEnemyObj)
+    {
+        float dmg = statsScript.attackDmg;
+
+        Instantiate(projPrefab, projSpawnPoint.transform.position, Quaternion.identity);
+
+        if (typeOfEnemy == "Minion")
+        {
+            projPrefab.GetComponent<RangedProjectile>().targetType = typeOfEnemy;
+
+            projPrefab.GetComponent<RangedProjectile>().target = targetedEnemyObj;
+            projPrefab.GetComponent<RangedProjectile>().targetSet = true;
         }
     }
 }

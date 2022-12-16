@@ -38,5 +38,7 @@ public class RangedProjectile : MonoBehaviour
                 }
             }
         }
+
+        Destroy(gameObject, 2f);
     }
 }

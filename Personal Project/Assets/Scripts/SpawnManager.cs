@@ -7,7 +7,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject enemiesPrefab;
     public GameObject alliesPrefab;
 
-    private float minionInterval = 60;
+    public float minionInterval;
     private float startDelay = 0;
 
     private void Start()

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028346, g: 0.22571373, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -934,7 +934,7 @@ MonoBehaviour:
   health: 560
   attackDmg: 54
   attackSpeed: 0.625
-  attackTime: 1
+  attackTime: 0.75
 --- !u!1 &217230496
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,7 +988,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b5b65187049df44699f23b08e9c53175, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1453,6 +1453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesPrefab: {fileID: 2853082339859332697, guid: 0f32d63d32c705d419559ac722b5fee0, type: 3}
   alliesPrefab: {fileID: 7266498406311863265, guid: ad1ac80b2b7b97246a72688136e5c930, type: 3}
+  minionInterval: 45
 --- !u!4 &431241824
 Transform:
   m_ObjectHideFlags: 0
@@ -2053,7 +2054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.922}
+  m_AnchoredPosition: {x: 0, y: 0.92199993}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &659592264

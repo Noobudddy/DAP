@@ -23,7 +23,7 @@ public class RangedProjectile : MonoBehaviour
                 Destroy(gameObject);
             }
 
-            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, velocity);
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, velocity * Time.deltaTime);
 
             if(!stopProjectile)
             {

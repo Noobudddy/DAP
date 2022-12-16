@@ -6,15 +6,12 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject enemiesPrefab;
     public GameObject alliesPrefab;
-    public bool stopSpawning;
 
-    private HeroCombat heroCombatScript;
-    private float minionInterval = 30;
+    private float minionInterval = 60;
     private float startDelay = 0;
 
     private void Start()
     {
-        heroCombatScript = GetComponent<HeroCombat>();
         InvokeRepeating("SpawnMinions", startDelay, minionInterval);
     }
 
@@ -25,15 +22,5 @@ public class SpawnManager : MonoBehaviour
 
         Instantiate(enemiesPrefab, enemySpawnPos, enemiesPrefab.transform.rotation);
         Instantiate(alliesPrefab, allySpawnPos, alliesPrefab.transform.rotation);
-
-        if (heroCombatScript.targetedEnemy.GetComponent<HeroCombat>().isHeroAlive == false)
-        {
-            stopSpawning = true;
-            
-            if (stopSpawning == true)
-            {
-                CancelInvoke("SpawnMinions");
-            }
-        }
     }
 }

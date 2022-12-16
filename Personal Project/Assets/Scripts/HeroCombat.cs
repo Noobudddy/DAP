@@ -12,12 +12,12 @@ public class HeroCombat : MonoBehaviour
     public float rotateSpeedForAttack;
 
     private PlayerController moveScript;
-    public bool isHeroAlive; 
+    public bool isHeroAlive;
     private Stats statsScript;
 
     [Header("Ranged Varialbes")]
     public bool performRangedAttack = true;
-    public GameObject projPrefab;
+    [SerializeField] public GameObject projPrefab;
     public Transform projSpawnPoint;
 
     // Start is called before the first frame update
@@ -74,6 +74,10 @@ public class HeroCombat : MonoBehaviour
         if (targetedEnemy == null)
         {
             performRangedAttack = true;
+        }
+        if (targetedEnemy != null)
+        {
+            RangedAttack();
         }
     }
 
